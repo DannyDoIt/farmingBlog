@@ -9,6 +9,7 @@ import SignupPage from './pages/SignupPage';
 import ProfilePage from './pages/Profile/ProfilePage';
 import Navbar from './components/Navbar';
 import ContactPage from './pages/ContactPage';
+import ShopItemPage from './pages/ShopItemPage';
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/signup" element={<SignupPage />} />
                 <Route path="/profile/*" element={<ProfilePage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/shop/item/:id" element={<ShopItemPage />} />
             </Routes>
         </Router>
         </div>
