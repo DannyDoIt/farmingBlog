@@ -1,0 +1,32 @@
+.profile-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 50px;
+	width: 100%;
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+.profile-container button {
+	background-color: green;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	margin-top: 10px;
+	width: 100%;
+	max-width: 350px;
+}
+
+.profile-container button:hover {
+	background-color: darkgreen;
+}
+
+.profile-container input {
+	padding: 10px;
+	margin: 10px 0;
+	width: 100%;
+	max-width: 350px;
+}
