@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContextAuth } from '../../contexts/AuthContext';
-import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../../styles/pages/LoginPage.css';
 
 const LoginPage = () => {
@@ -14,9 +15,10 @@ const LoginPage = () => {
 		e.preventDefault();
 		try {
 			await login(email, password);
+			toast.success('Successfully logged in!');
 			navigate('/profile');
 		} catch (error) {
-			console.log(error.message)
+			toast.error('Invalid credentials, please try again!');
 		}
 	};
 
@@ -38,12 +40,13 @@ const LoginPage = () => {
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
-				<button type="submit">Log In</button>
+				<button type="submit" className="login-btn">Log In</button>
 			</form>
 			<div className="login-links">
-				<Link to="/forgot-password">Forgot User/Password?</Link>
-				<Link to="/signup">Sign Up</Link>
+				<button className="link-btn" onClick={() => navigate('/forgot-password')}>Forgot User/Password?</button>
+				<button className="link-btn" onClick={() => navigate('/signup')}>Sign Up</button>
 			</div>
+			<ToastContainer />
 		</div>
 	);
 };

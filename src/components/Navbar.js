@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 import { useContextAuth } from "../contexts/AuthContext";
 import "../styles/components/Navbar.css";
 
@@ -17,7 +18,10 @@ const Navbar = () => {
 			) : (
 				<Link to="/login">Login</Link>
 			)}
-			<Link to="/cart" className="cart-link">Cart</Link> {/* Added Cart link */}
+			<Link to="/cart">
+				<FaShoppingCart /> Cart
+			</Link>
+			<Link to="/terms">Terms of Service</Link>
 		</div>
 	);
 };

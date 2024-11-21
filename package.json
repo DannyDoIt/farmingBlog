@@ -7,7 +7,9 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "css-select": "^4.3.0",
+    "emailjs-com": "^3.2.0",
     "express": "^4.21.1",
+    "font-awesome": "^4.7.0",
     "higher": "^1.0.5",
     "jsonwebtoken": "^9.0.2",
     "nth-check": "^2.0.1",
@@ -15,9 +17,12 @@
     "postcss": "^8.4.31",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-modal": "^3.16.1",
     "react-router": "^6.28.0",
     "react-router-dom": "^6.28.0",
     "react-scripts": "^5.0.1",
+    "react-toastify": "^10.0.6",
     "svgo": "^2.8.0"
   },
   "scripts": {
